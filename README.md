@@ -19,7 +19,7 @@ This is a WIP and it's not ready for production.
 The best way to use this package is through Composer:
 
 ```CMD
-composer require italystrap/storage-tests
+composer require italystrap/storage-tests --dev
 ```
 This package adheres to the [SemVer](http://semver.org/) specification and will be fully backward compatible between minor versions.
 
