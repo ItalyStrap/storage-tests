@@ -6,10 +6,11 @@ namespace ItalyStrap\Tests;
 
 use ItalyStrap\Config\Config;
 use ItalyStrap\Storage\StoreInterface;
+use ItalyStrap\StorageTests\CommonStoreMultipleTestsTrait;
 
 class CommonStoreTest extends UnitTestCase
 {
-    use \ItalyStrap\StorageTests\CommonStoreMultipleTestsTrait;
+    use CommonStoreMultipleTestsTrait;
 
     public function makeInstance()
     {
