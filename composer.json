@@ -1,0 +1,80 @@
+{
+    "name": "italystrap/storage-tests",
+    "description": "ItalyStrap common StorageTests",
+    "keywords": ["storage tests", "test"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enea Overclokk",
+            "email": "info@overclokk.net",
+            "homepage": "https://www.italystrap.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php" : ">=7.4",
+        "italystrap/storage": "^1.0.0"
+    },
+    "require-dev": {
+        "lucatume/wp-browser": "^3.1",
+        "codeception/module-asserts": "^1.0",
+
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+
+        "vimeo/psalm": "^4.26",
+        "italystrap/config": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "ItalyStrap\\StorageTests\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ItalyStrap\\Tests\\": "tests/src",
+            "ItalyStrap\\Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "scripts": {
+        "qa": [
+            "@cs",
+            "@psalm",
+            "@unit",
+            "@clean"
+        ],
+        "tests": [
+            "@unit"
+        ],
+        "cs": [
+            "@php vendor/bin/phpcs -p"
+        ],
+        "cs:fix": [
+            "@php vendor/bin/phpcbf -p"
+        ],
+        "psalm": [
+            "@php vendor/bin/psalm --no-cache"
+        ],
+        "unit": [
+            "@php vendor/bin/codecept run unit"
+        ],
+        "unit:debug": [
+            "@php vendor/bin/codecept run unit --debug"
+        ],
+        "clean": [
+            "@php vendor/bin/codecept clean"
+        ]
+    },
+    "support"    : {
+        "issues": "https://github.com/ItalyStrap/storage-tests/issues",
+        "source": "https://github.com/ItalyStrap/storage-tests"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

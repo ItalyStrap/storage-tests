@@ -1,0 +1,20 @@
+# Directory
+.idea/
+/vendor/
+/_others/
+src/Collections/
+.phpbench/
+tests/_stats
+tests/_output/*
+tests/_support/_generated/*
+
+# File
+*.local
+codeception.yml
+*.lock
+*.phar
+infection.json
+c3.php
+phpbench.json
+rector.php
+**/*.bak
